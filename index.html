@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>REASERCH</title>
+
+
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3101820026816381');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3101820026816381&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050817;
+            color: #fff;
+        }
+
+        .page {
+            min-height: 100vh;
+            padding: 10px 8px;
+            display: flex;
+            justify-content: center;
+
+            background:
+                radial-gradient(circle at top, #172554 0%, #080b1b 45%, #03040c 100%);
+        }
+
+        .card {
+            width: 100%;
+            max-width: 500px;
+            min-height: 100vh;
+            padding: 36px 30px 30px;
+
+            text-align: center;
+
+            border: 1px solid #3344a0;
+            border-radius: 25px;
+
+            background: rgba(7, 13, 31, 0.94);
+
+            box-shadow:
+                0 0 35px rgba(59, 130, 246, 0.15),
+                inset 0 0 25px rgba(99, 102, 241, 0.04);
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* TOP LINE */
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+
+            background: linear-gradient(
+                90deg,
+                #00d9ff,
+                #6366f1,
+                #a855f7,
+                #00d9ff
+            );
+        }
+
+        /* BADGE */
+        .badge {
+            display: inline-block;
+
+            padding: 9px 22px;
+
+            border: 1px solid #6366f1;
+            border-radius: 9px;
+
+            background: rgba(99, 102, 241, 0.10);
+
+            color: #8be9ff;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            letter-spacing: 1.3px;
+
+            margin-bottom: 27px;
+        }
+
+        /* PROFILE */
+        .profile {
+            width: 145px;
+            height: 145px;
+
+            margin: 0 auto 25px;
+
+            padding: 6px;
+
+            border-radius: 50%;
+
+            background: linear-gradient(
+                135deg,
+                #00e5ff,
+                #6366f1,
+                #c026d3
+            );
+
+            box-shadow:
+                0 0 20px rgba(0, 217, 255, 0.45),
+                0 0 45px rgba(99, 102, 241, 0.25);
+        }
+
+        .profile img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 4px solid #07101e;
+        }
+
+        /* HEADING */
+        h1 {
+            font-size: 27px;
+            line-height: 1.2;
+
+            margin-bottom: 20px;
+
+            color: #ffffff;
+
+            text-transform: uppercase;
+        }
+
+        h1 span {
+            color: #63e6ff;
+        }
+
+        /* DESCRIPTION */
+        .description {
+            font-size: 15px;
+            line-height: 1.8;
+
+            color: #c5cbd8;
+
+            margin-bottom: 18px;
+        }
+
+        .description b {
+            color: #ffffff;
+        }
+
+      .join-btn {
+	width: 100%;
+	min-height: 62px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 11px;
+	border-radius: 14px;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 17px;
+	font-weight: 900;
+	letter-spacing: .4px;
+	background: green;
+	border: 1px solid #7dd3fc;
+	box-shadow: 0 8px 25px rgba(0, 191, 255, 0.28);
+	margin-bottom: 13px;
+	animation: telegramZoom 1.4s ease-in-out infinite;
+	transition: .3s;
+}
+
+        .join-btn:hover {
+            transform: scale(1.04);
+        }
+
+        .telegram-icon {
+            width: 25px;
+            height: 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #fff;
+
+            color: #229ed9;
+
+            font-size: 15px;
+        }
+
+        @keyframes telegramZoom {
+
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.045);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+
+        }
+
+        /* FEATURES */
+        .features {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            margin-top: 5px;
+        }
+
+        .feature {
+            min-height: 60px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 12px 18px;
+
+            border: 1px solid #28396d;
+
+            border-radius: 15px;
+
+            background: rgba(11, 20, 42, 0.75);
+
+            text-align: left;
+
+            transition: .3s;
+        }
+
+        .feature:hover {
+            border-color: #00cfff;
+            background: rgba(0, 191, 255, 0.07);
+        }
+
+        .feature-icon {
+            width: 32px;
+
+            font-size: 22px;
+
+            color: #48e5ff;
+
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            font-size: 14px;
+            font-weight: 600;
+
+            color: #f1f5ff;
+        }
+
+        /* DISCLAIMER */
+        .disclaimer {
+            margin-top: 18px;
+
+            color: #7f8aa3;
+
+            font-size: 10px;
+            line-height: 1.5;
+        }
+
+        /* MOBILE */
+        @media (max-width: 480px) {
+
+            .page {
+                padding: 8px 7px;
+            }
+
+            .card {
+                padding: 35px 30px 25px;
+                border-radius: 22px;
+            }
+
+            .badge {
+                font-size: 12px;
+                padding: 8px 18px;
+                margin-bottom: 25px;
+            }
+
+            .profile {
+                width: 135px;
+                height: 135px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            .description {
+                font-size: 14px;
+                line-height: 1.75;
+            }
+
+            .join-btn {
+                min-height: 60px;
+                font-size: 16px;
+            }
+
+            .feature {
+                min-height: 58px;
+            }
+        }
+
+        @media (max-width: 360px) {
+
+            .card {
+                padding: 30px 20px 22px;
+            }
+
+            .profile {
+                width: 120px;
+                height: 120px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .description {
+                font-size: 13px;
+            }
+
+            .feature-text {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="card">
+
+       
+
+        <!-- PROFILE IMAGE -->
+        <div class="profile">
+
+            <img src="u.jpg" alt="Stock Market">
+
+        </div>
+
+
+        <!-- TITLE -->
+        <h1>
+         <span>UNIGROWTH REASERCH</span>
+        </h1>
+
+
+        <!-- DESCRIPTION -->
+        <div class="description">
+
+          <p>St@ck Market Advisory provides research-based market insights and educational guidance to help investors make informed decisions while understanding market risks.</p>
+
+        </div>
+
+
+        <!-- FIRST JOIN BUTTON -->
+        <a href="https://chat.whatsapp.com/J1I0xej4KIe2RGu4Q8WKrr"
+           target="_blank"
+           class="join-btn">
+
+           
+            JOIN COMMUNITY CHANNEL
+
+        </a>
+
+
+        <!-- FEATURES -->
+        <div class="features">
+
+            <div class="feature">
+
+                <div class="feature-icon">✓</div>
+
+                <div class="feature-text">
+                    Daily Market Updates
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">⚡</div>
+
+                <div class="feature-text">
+                    Nifty & Bank Nifty Insights
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">📊</div>
+
+                <div class="feature-text">
+                   Timely Market Alerts
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">↗</div>
+
+                <div class="feature-text">
+                    Free Tr@ding Resources
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SECOND JOIN BUTTON -->
+        <a href="https://chat.whatsapp.com/J1I0xej4KIe2RGu4Q8WKrr"
+           target="_blank"
+           class="join-btn"
+           style="margin-top:16px;">
+
+           
+
+            JOIN COMMUNITY CHANNEL
+        </a>
+
+
+        <!-- DISCLAIMER -->
+        <div class="disclaimer">
+
+            ⚠️ Investment in securities market is subject to market risks.
+            This content is for educational and informational purposes only.
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
